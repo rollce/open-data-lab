@@ -1,26 +1,48 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f4f8f7;
+  --foreground: #102023;
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-strong: rgba(255, 255, 255, 0.92);
+  --border: rgba(16, 32, 35, 0.12);
+  --hero-gradient: radial-gradient(circle at 18% 18%, #d7f9ef 0%, #f4f8f7 52%);
+  --teal: #0e7a76;
+  --orange: #d96b2b;
+  --blue: #2b6ed9;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-space-grotesk);
+  --font-display: var(--font-crimson-pro);
 }
 
 body {
-  background: var(--background);
+  background: var(--hero-gradient);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-space-grotesk), sans-serif;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-crimson-pro), serif;
+}
+
+* {
+  border-color: var(--border);
+}
+
+.glass-card {
+  background: var(--surface);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  box-shadow: 0 18px 48px rgba(8, 21, 26, 0.08);
+}
+
+.surface-strong {
+  background: var(--surface-strong);
 }
