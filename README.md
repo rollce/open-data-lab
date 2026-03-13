@@ -1,39 +1,37 @@
 # Open Data Lab
 
-Interactive environmental research dashboard designed for university portfolio applications.
+Multi-page environmental research website for university portfolio submissions.
 
-## Highlights
-- Animated storytelling UI with `framer-motion`
-- Regional PM2.5 trend exploration with live filtering
-- Comparative sustainability benchmarks with `recharts`
-- Fully English product copy and documentation
+## What is included
+- `Overview` page with project scope and KPI cards
+- `Insights` page with interactive visual analytics
+- `Datasets` page with source catalog and quality workflow
+- `Methodology` page with reproducible research process
+
+## UI and Architecture
+- Ready UI blocks from **Ant Design** (`Menu`, `Card`, `Table`, `Timeline`, `Steps`)
+- Custom animations with `framer-motion`
+- Data charts with `recharts`
 
 ## Tech Stack
-- Next.js 16 (App Router)
+- Next.js 16 + App Router
 - TypeScript
 - Tailwind CSS 4
+- Ant Design
 - Recharts
 - Framer Motion
 
-## Local Development
+## Routes
+- `/`
+- `/insights`
+- `/datasets`
+- `/methodology`
+
+## Run locally
 ```bash
 npm install
 npm run dev
 ```
 
-## Build
-```bash
-npm run build
-npm start
-```
-
-## Railway Deployment
-1. Create a new Railway project.
-2. Connect this repository.
-3. Railway will run `npm install`, `npm run build`, and `npm start` automatically.
-
-## Portfolio Positioning
-Use this project to demonstrate:
-- Data interpretation from open datasets
-- Visual communication of research findings
-- Frontend architecture and design quality
+## Production
+Deployed on Railway.
